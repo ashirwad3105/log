@@ -1,3 +1,13 @@
+
+- name: 📤 Upload logs
+  uses: actions/upload-artifact@v4  # ✅ Make sure it's v4, not v3
+  with:
+    name: build-logs
+    path: logs.txt
+
+
+
+
 name: Node.js CI with Build Logs
 
 on: [push, pull_request]
@@ -42,3 +52,5 @@ jobs:
 
       - name: Show log contents (debug)
         run: cat shared_logs/build.log
+
+
